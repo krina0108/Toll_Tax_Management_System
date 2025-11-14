@@ -1,0 +1,232 @@
+/* 🌸 Container */
+.staff-update-container {
+  width: 100%;
+  max-width: 950px;
+  margin: 80px auto;
+  padding: 20px;
+  font-family: "Poppins", sans-serif;
+  color: #333;
+  background: #fffafa;
+}
+
+/* 🌸 Card */
+.staff-update-card {
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(255, 128, 128, 0.25);
+  padding: 25px 30px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 22px;
+}
+
+/* 🌸 Title */
+.staff-update-title {
+  grid-column: 1 / -1;
+  font-size: 26px;
+  font-weight: 600;
+  color: #cc0000;
+  margin-bottom: 15px;
+  border-bottom: 2px solid #ffd1d1;
+  padding-bottom: 8px;
+}
+
+/* LEFT & RIGHT */
+.staff-update-left,
+.staff-update-right {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+/* 🌸 Form Row */
+.staff-update-row {
+  display: flex;
+  flex-direction: column;
+}
+
+.staff-update-row label {
+  font-weight: 500;
+  color: #444;
+  margin-bottom: 6px;
+}
+
+/* 🌸 Inputs */
+.staff-update-row input,
+.staff-update-row textarea {
+  padding: 10px 12px;
+  border: 1px solid #ffd1d1;
+  border-radius: 6px;
+  background-color: #fffdfd;
+  color: #555;
+  font-size: 14px;
+  outline: none;
+  resize: none;
+}
+
+.staff-update-row input:focus,
+.staff-update-row textarea:focus {
+  border-color: #ff8888;
+}
+
+/* 🌸 Button Wrappers */
+.staff-btn-wrapper {
+  grid-column: 1 / -1;
+  text-align: center;
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+/* 🌸 Buttons */
+.btn-update,
+.btn-back {
+  font-size: 15px;
+  font-weight: 500;
+  padding: 10px 26px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+
+/* Update Button */
+.btn-update {
+  background-color: #cc0000;
+  color: white;
+  box-shadow: 0 3px 6px rgba(204, 0, 0, 0.25);
+}
+
+.btn-update:hover {
+  background-color: #b30000;
+  box-shadow: 0 4px 10px rgba(179, 0, 0, 0.3);
+  transform: translateY(-1px);
+}
+
+/* Back Button */
+.btn-back {
+  background-color: #cc0000;
+  color: white;
+  box-shadow: 0 3px 6px rgba(204, 0, 0, 0.25);
+}
+
+.btn-back:hover {
+  background-color: #b30000;
+  box-shadow: 0 4px 10px rgba(179, 0, 0, 0.3);
+  transform: translateY(-1px);
+}
+
+/* 🌸 Responsive */
+@media (max-width: 768px) {
+  .staff-update-container {
+    margin: 50px auto;
+    padding: 15px;
+  }
+
+  .staff-update-card {
+    grid-template-columns: 1fr;
+    padding: 20px;
+  }
+
+  .staff-update-title {
+    font-size: 22px;
+  }
+}
+
+@media (max-width: 480px) {
+  .staff-update-card {
+    padding: 15px;
+  }
+
+  .staff-update-title {
+    text-align: center;
+  }
+}
+
+
+/* ✅✅✅ CustomSelect Dropdown — SAME STYLE AS AddPassAdmin ✅✅✅ */
+
+.custom-select {
+  position: relative;
+  width: 100%;
+}
+
+.custom-select-btn {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 12px 14px;
+  background: #fffafa;
+  border: 1.5px solid #ffdede;
+  border-radius: 8px;
+  font-size: 14px;
+  cursor: pointer;
+  text-align: left;
+  transition: all 0.3s ease;
+}
+
+.custom-select-btn:hover {
+  border-color: #ffb3b3;
+}
+
+.selected-text.placeholder {
+  color: #9b9b9b;
+}
+
+.custom-select .arrow {
+  margin-left: 12px;
+  font-size: 14px;
+  color: #4d0000;
+  transition: transform 0.3s ease;
+}
+
+.custom-select.open .arrow {
+  transform: rotate(180deg);
+}
+
+.custom-select-list {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 100%;
+  margin-top: 4px;
+  background: white;
+  border: 1px solid #ffdede;
+  border-radius: 8px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  max-height: 220px;
+  overflow-y: auto;
+  z-index: 1000;
+  padding: 6px;
+  list-style: none;
+}
+
+.custom-select-option {
+  padding: 10px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  color: #111;
+  transition: all 0.2s ease;
+}
+
+.custom-select-option:hover {
+  background: #fff3f3;
+}
+
+.custom-select-option.active {
+  background: linear-gradient(90deg, #ffecec, #fff2f2);
+  border: 1px solid #ffdede;
+  font-weight: 600;
+}
+
+.custom-select-list::-webkit-scrollbar {
+  width: 6px;
+}
+
+.custom-select-list::-webkit-scrollbar-thumb {
+  background: #ffb3b3;
+  border-radius: 8px;
+}

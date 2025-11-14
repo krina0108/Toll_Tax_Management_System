@@ -1,0 +1,177 @@
+/* Global */
+* {
+  font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Container */
+.vp-container {
+  background: #fff7f7;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+}
+
+/* Card */
+.vp-card {
+  background: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 4px 20px rgba(255, 102, 102, 0.2);
+  padding: 40px 50px;
+  max-width: 600px;
+  width: 100%;
+  text-align: center;
+  border-top: 6px solid #ff4d4d;
+  transition: all 0.3s ease;
+}
+
+/* Title */
+.vp-title {
+  color: #ff4d4d;
+  font-size: 24px;
+  margin-bottom: 25px;
+  font-weight: 600;
+}
+
+/* Table */
+.vp-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 25px;
+}
+
+.vp-table tr {
+  border-bottom: 1px solid #ffc2c2;
+}
+
+.vp-table td {
+  padding: 10px 15px;
+  text-align: left;
+  font-size: 15px;
+  background-color: #fff;
+  color: #555;
+}
+
+/* First column (label) */
+.vp-table td:first-child {
+  width: 40%;
+  background-color: #ffeaea;
+  font-weight: 600;
+  color: #333;
+}
+
+/* Buttons Group */
+.vp-btn-group {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Buttons */
+.vp-btn-group button {
+  background: #ff4d4d;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: 0.3s;
+}
+
+.vp-btn-group button:hover {
+  background: #e63939;
+}
+
+/* Responsive - Small */
+@media (max-width: 480px) {
+  .vp-card {
+    padding: 25px 20px;
+    max-width: 95%;
+  }
+
+  .vp-title {
+    font-size: 20px;
+    margin-bottom: 15px;
+  }
+
+  .vp-table td {
+    font-size: 13px;
+    padding: 8px;
+  }
+
+  .vp-btn-group {
+    gap: 8px;
+  }
+
+  .vp-btn-group button {
+    width: 100%;
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  .vp-container {
+    padding: 20px;
+  }
+}
+
+/* Tablet */
+@media (min-width: 481px) and (max-width: 768px) {
+  .vp-card {
+    padding: 30px 30px;
+    max-width: 90%;
+  }
+
+  .vp-title {
+    font-size: 22px;
+  }
+
+  .vp-table td {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  .vp-btn-group button {
+    font-size: 15px;
+  }
+}
+
+/* Large Screens */
+@media (min-width: 769px) {
+  .vp-card {
+    padding: 40px 50px;
+  }
+
+  .vp-title {
+    font-size: 24px;
+  }
+}
+
+/* PRINT MODE */
+@media print {
+  body * {
+    visibility: hidden;
+  }
+
+  .vp-card,
+  .vp-card * {
+    visibility: visible;
+  }
+
+  .vp-card {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    box-shadow: none;
+    border: none;
+  }
+
+  .vp-btn-group {
+    display: none;
+  }
+}

@@ -1,0 +1,258 @@
+* {
+  font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* PAGE BACKGROUND */
+.datesReportsContainer {
+  background: #fffafa;
+  min-height: 100vh;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #333;
+}
+
+/* WRAPPER */
+.datesReportsWrapper {
+  width: 80%;
+  max-width: 1200px;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(255, 128, 128, 0.25);
+  padding: 40px 50px;
+  border-top: 6px solid #ff4d4d;
+  transition: 0.3s;
+}
+
+/* HEADING */
+.datesReportsHeading {
+  margin-bottom: 14px;
+  color: #cc0000;
+  font-weight: 600;
+  font-size: 28px;
+  text-align: center;
+  border-bottom: 2px solid #ffd1d1;
+  padding-bottom: 8px;
+}
+
+/* SUB TEXT */
+.datesReportsSubText {
+  margin-bottom: 25px;
+  color: #cc0000;
+  text-align: center;
+}
+
+/* TABLE */
+.datesReportsTable {
+  width: 100%;
+  border-collapse: collapse;
+  background: #ffffff;
+}
+
+.datesReportsTable th,
+.datesReportsTable td {
+  border: 1px solid #ffd1d1;
+  padding: 12px 16px;
+  text-align: left;
+  font-size: 14px;
+}
+
+.datesReportsTable th {
+  background-color: #ffeaea;
+  font-weight: 600;
+  color: #cc0000;
+}
+
+.datesReportsTable tr:nth-child(even) {
+  background-color: #fffdfd;
+}
+
+.datesReportsTable tr:hover {
+  background-color: #ffd1d1;
+  transition: 0.3s;
+}
+
+/* View Button */
+.datesReportsActionBtn {
+  background: #ff4d4d;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 8px 14px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+.datesReportsActionBtn:hover {
+  background: #e63939;
+}
+
+.datesReportsBackBtnWrap {
+  display: flex;
+  justify-content: center;
+  margin-top: 18px;
+}
+
+/* RESPONSIVE DESIGN */
+
+/* Tablet View (max-width: 1024px) */
+@media (max-width: 1024px) {
+  .datesReportsContainer {
+    padding: 30px 20px;
+  }
+
+  .datesReportsWrapper {
+    width: 90%;
+    padding: 30px 40px;
+  }
+
+  .datesReportsHeading {
+    font-size: 24px;
+  }
+
+  .datesReportsTable th,
+  .datesReportsTable td {
+    padding: 10px 12px;
+    font-size: 13px;
+  }
+
+  .datesReportsActionBtn {
+    padding: 7px 12px;
+    font-size: 13px;
+  }
+}
+
+/* Mobile View (max-width: 768px) */
+@media (max-width: 768px) {
+  .datesReportsContainer {
+    padding: 20px 10px;
+  }
+
+  .datesReportsWrapper {
+    width: 95%;
+    padding: 25px 20px;
+  }
+
+  .datesReportsHeading {
+    font-size: 22px;
+    margin-bottom: 10px;
+  }
+
+  .datesReportsSubText {
+    font-size: 14px;
+    margin-bottom: 20px;
+  }
+
+  .datesReportsTable thead {
+    display: none;
+  }
+
+  .datesReportsTable tr {
+    display: flex;
+    flex-direction: column;
+    background: #fffafa;
+    border: 1px solid #ffd1d1;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    padding: 15px;
+    box-shadow: 0 2px 8px rgba(255, 128, 128, 0.2);
+  }
+
+  .datesReportsTable td {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: none;
+    border-bottom: 1px solid #ffeaea;
+    padding: 10px 5px;
+    font-size: 14px;
+  }
+
+  .datesReportsTable td::before {
+    content: attr(data-label);
+    font-weight: 600;
+    color: #cc0000;
+    flex-basis: 40%;
+    text-align: left;
+  }
+
+  .datesReportsTable td:last-child {
+    border-bottom: none;
+  }
+
+  .datesReportsActionBtn {
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+  }
+
+  .datesReportsBackBtnWrap {
+    margin-top: 20px;
+  }
+}
+
+/* Small Mobile View (max-width: 480px) */
+@media (max-width: 480px) {
+  .datesReportsContainer {
+    padding: 15px 5px;
+  }
+
+  .datesReportsWrapper {
+    width: 100%;
+    padding: 20px 15px;
+    border-radius: 8px;
+  }
+
+  .datesReportsHeading {
+    font-size: 20px;
+  }
+
+  .datesReportsSubText {
+    font-size: 13px;
+  }
+
+  .datesReportsTable tr {
+    padding: 10px;
+    margin-bottom: 10px;
+  }
+
+  .datesReportsTable td {
+    padding: 8px 5px;
+    font-size: 13px;
+  }
+
+  .datesReportsTable td::before {
+    flex-basis: 45%;
+  }
+
+  .datesReportsActionBtn {
+    padding: 8px;
+    font-size: 13px;
+  }
+}
+
+/* PRINT */
+@media print {
+  body * {
+    visibility: hidden;
+  }
+
+  .datesReportsWrapper,
+  .datesReportsWrapper * {
+    visibility: visible;
+  }
+
+  .datesReportsWrapper {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    box-shadow: none;
+    border: none;
+  }
+}

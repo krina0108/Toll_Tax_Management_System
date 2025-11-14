@@ -1,0 +1,183 @@
+/* Global */
+* {
+  font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Container */
+.rda-container {
+  background: #fff7f7;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+}
+
+/* Card */
+.rda-card {
+  background: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 4px 20px rgba(255, 102, 102, 0.2);
+  padding: 40px 50px;
+  max-width: 600px;
+  width: 100%;
+  text-align: center;
+  border-top: 6px solid #ff4d4d;
+  transition: all 0.3s ease;
+}
+
+/* Title */
+.rda-title {
+  color: #ff4d4d;
+  font-size: 24px;
+  margin-bottom: 25px;
+  font-weight: 600;
+}
+
+/* Table */
+.rda-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 25px;
+}
+
+.rda-table th,
+.rda-table td {
+  border: 1px solid #ffc2c2;
+  padding: 10px 15px;
+  text-align: left;
+  font-size: 15px;
+}
+
+.rda-table th {
+  background-color: #ffeaea;
+  width: 40%;
+  color: #333;
+  font-weight: 600;
+}
+
+.rda-table td {
+  background-color: #fff;
+  color: #555;
+}
+
+/* Buttons Group */
+.rda-btn-group {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Buttons */
+.rda-print-btn,
+.rda-back-btn {
+  background: #ff4d4d;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: 0.3s;
+}
+
+.rda-print-btn:hover,
+.rda-back-btn:hover {
+  background: #e63939;
+}
+
+/* Responsive - Small */
+@media (max-width: 480px) {
+  .rda-card {
+    padding: 25px 20px;
+    max-width: 95%;
+  }
+
+  .rda-title {
+    font-size: 20px;
+    margin-bottom: 15px;
+  }
+
+  .rda-table th,
+  .rda-table td {
+    font-size: 13px;
+    padding: 8px;
+  }
+
+  .rda-btn-group {
+    gap: 8px;
+  }
+
+  .rda-print-btn,
+  .rda-back-btn {
+    width: 100%;
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  .rda-container {
+    padding: 20px;
+  }
+}
+
+/* Responsive - Tablet */
+@media (min-width: 481px) and (max-width: 768px) {
+  .rda-card {
+    padding: 30px 30px;
+    max-width: 90%;
+  }
+
+  .rda-title {
+    font-size: 22px;
+  }
+
+  .rda-table th,
+  .rda-table td {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  .rda-print-btn,
+  .rda-back-btn {
+    font-size: 15px;
+  }
+}
+
+/* Large Screens */
+@media (min-width: 769px) {
+  .rda-card {
+    padding: 40px 50px;
+  }
+
+  .rda-title {
+    font-size: 24px;
+  }
+}
+
+/* Print */
+@media print {
+  body * {
+    visibility: hidden;
+  }
+
+  .rda-card,
+  .rda-card * {
+    visibility: visible;
+  }
+
+  .rda-card {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    box-shadow: none;
+    border: none;
+  }
+
+  .rda-btn-group {
+    display: none;
+  }
+}

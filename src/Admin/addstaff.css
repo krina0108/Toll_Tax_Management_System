@@ -1,0 +1,361 @@
+/* 🌸 Page Container */
+.add-staff-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #fff5f5, #ffeaea);
+  font-family: "Poppins", sans-serif;
+  overflow: hidden;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* 🧾 Form Card */
+.add-staff-form {
+  background: #ffffff;
+  padding: 35px 40px;
+  border-radius: 14px;
+  box-shadow: 0 6px 20px rgba(255, 120, 120, 0.15);
+  width: 100%;
+  max-width: 750px;
+  border-top: 5px solid #ff4d4d;
+  transition: all 0.3s ease;
+  position: relative;
+  max-height: 90vh;
+  overflow-y: auto;
+  overflow-x: hidden;
+  scrollbar-width: thin;
+  scrollbar-color: #ffb3b3 #fff5f5;
+}
+
+/* Scrollbar (Chrome/Edge) */
+.add-staff-form::-webkit-scrollbar {
+  width: 6px;
+}
+.add-staff-form::-webkit-scrollbar-thumb {
+  background-color: #ffb3b3;
+  border-radius: 10px;
+}
+.add-staff-form::-webkit-scrollbar-track {
+  background-color: #fff5f5;
+}
+
+.add-staff-form h2 {
+  text-align: center;
+  margin-bottom: 25px;
+  color: #b30000;
+  font-size: 26px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+/* ✅ GRID LAYOUT */
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px 25px;
+}
+
+.form-group.full-width {
+  grid-column: span 2;
+}
+
+/* 🧱 Input Fields */
+.form-group label {
+  display: block;
+  font-size: 14px;
+  font-weight: 500;
+  color: #4d0000;
+  margin-bottom: 6px;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 10px 12px;
+  font-size: 14px;
+  border: 1.5px solid #ffcccc;
+  border-radius: 8px;
+  outline: none;
+  transition: all 0.2s ease;
+  background-color: #fffafa;
+  box-sizing: border-box;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: #ff4d4d;
+  background: #ffffff;
+  box-shadow: 0 0 0 3px rgba(255, 120, 120, 0.2);
+}
+
+/* 👩‍🦰 Gender Options - 3 Buttons in One Line */
+.gender-options {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 15px;
+  flex-wrap: nowrap; /* Ensures buttons stay in one line */
+  margin-top: 5px;
+  /* overflow-x: auto; Allows horizontal scroll if needed on very small screens */
+  /* scrollbar-width: thin; */
+  scrollbar-color: #ffb3b3 #fff5f5;
+}
+
+.gender-options::-webkit-scrollbar {
+  height: 4px;
+}
+
+.gender-options::-webkit-scrollbar-thumb {
+  background-color: #ffb3b3;
+  border-radius: 10px;
+}
+
+.gender-options label {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 14px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #4d0000;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background: linear-gradient(135deg, #ffeaea, #fff5f5);
+  border: 2px solid #ffcccc;
+  box-shadow: 0 2px 5px rgba(255, 120, 120, 0.1);
+  white-space: nowrap;
+  flex-shrink: 0; /* Prevents shrinking */
+}
+
+.gender-options input[type="radio"] {
+  accent-color: #ff4d4d;
+  width: 12px; /* Made smaller */
+  height: 12px; /* Made smaller */
+  cursor: pointer;
+}
+
+/* Selected State */
+.gender-options label.selected {
+  background: linear-gradient(135deg, #ff4d4d, #ff8080);
+  color: white;
+  border-color: #ff4d4d;
+  box-shadow: 0 4px 10px rgba(255, 77, 77, 0.3);
+  transform: scale(1.05);
+}
+
+/* Hover State */
+.gender-options label:hover {
+  background: linear-gradient(135deg, #ffb3b3, #ffcccc);
+  transform: scale(1.05);
+  box-shadow: 0 4px 10px rgba(255, 120, 120, 0.2);
+}
+
+/* ✅ Submit Button */
+.submit-btn {
+  margin-top: 20px;
+  display: block;
+  width: 100%;
+  padding: 11px;
+  background: linear-gradient(135deg, #ff4d4d, #ff8080);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(255, 77, 77, 0.3);
+}
+
+.submit-btn:hover {
+  background: linear-gradient(135deg, #e63946, #ff6666);
+  transform: translateY(-2px);
+}
+
+/* 🚨 Error Message */
+.error {
+  color: #d90429;
+  font-size: 13px;
+  margin-top: 5px;
+  display: block;
+}
+
+/* 📱 RESPONSIVE DESIGN */
+
+/* Tablet Styles (max-width: 768px) */
+@media (max-width: 768px) {
+  .add-staff-container {
+    padding: 15px;
+  }
+
+  .add-staff-form {
+    padding: 25px 30px;
+    max-width: 600px;
+    max-height: 95vh;
+  }
+
+  .add-staff-form h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+
+  .form-grid {
+    grid-template-columns: 1fr; /* Changed to single column for better responsiveness */
+    gap: 15px 20px;
+  }
+
+  .form-group.full-width {
+    grid-column: span 1;
+  }
+
+  .gender-options {
+    gap: 12px;
+    justify-content: center;
+  }
+
+  .gender-options label {
+    padding: 6px 12px;
+    font-size: 13px;
+  }
+
+  .gender-options input[type="radio"] {
+    width: 10px; /* Smaller on tablets */
+    height: 10px; /* Smaller on tablets */
+  }
+
+  .submit-btn {
+    font-size: 15px;
+    padding: 10px;
+  }
+}
+
+/* Medium Mobile Styles (max-width: 540px) */
+@media (max-width: 540px) {
+  .add-staff-container {
+    padding: 12px;
+  }
+
+  .add-staff-form {
+    padding: 22px 18px;
+    max-width: 100%;
+    max-height: none;
+    border-radius: 12px;
+  }
+
+  .add-staff-form h2 {
+    font-size: 22px;
+    margin-bottom: 18px;
+  }
+
+  .form-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .form-group.full-width {
+    grid-column: span 1;
+  }
+
+  .form-group label {
+    font-size: 13px;
+  }
+
+  .form-group input,
+  .form-group textarea {
+    padding: 9px 11px;
+    font-size: 13px;
+  }
+
+  .gender-options {
+    gap: 8px;
+    justify-content: center;
+  }
+
+  .gender-options label {
+    padding: 5px 8px;
+    font-size: 12px;
+  }
+
+  .gender-options input[type="radio"] {
+    width: 10px;
+    height: 10px;
+  }
+
+  .submit-btn {
+    font-size: 14px;
+    padding: 10px;
+    margin-top: 18px;
+  }
+
+  .error {
+    font-size: 12px;
+  }
+}
+
+/* Phone Styles (max-width: 480px) */
+@media (max-width: 480px) {
+  .add-staff-container {
+    padding: 10px;
+    min-height: auto;
+    overflow: auto;
+  }
+
+  .add-staff-form {
+    padding: 20px 15px;
+    max-width: 100%;
+    max-height: none;
+    border-radius: 10px;
+  }
+
+  .add-staff-form h2 {
+    font-size: 20px;
+    margin-bottom: 15px;
+  }
+
+  .form-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .form-group.full-width {
+    grid-column: span 1;
+  }
+
+  .form-group label {
+    font-size: 13px;
+  }
+
+  .form-group input,
+  .form-group textarea {
+    padding: 8px 10px;
+    font-size: 13px;
+  }
+
+  .gender-options {
+    gap: 6px;
+    justify-content: center;
+  }
+
+  .gender-options label {
+    padding: 4px 6px;
+    font-size: 11px;
+  }
+
+  .gender-options input[type="radio"] {
+    width: 10px;
+    height: 10px;
+  }
+
+  .submit-btn {
+    font-size: 14px;
+    padding: 9px;
+    margin-top: 15px;
+  }
+
+  .error {
+    font-size: 12px;
+  }
+}

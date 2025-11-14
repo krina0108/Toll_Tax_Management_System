@@ -1,0 +1,263 @@
+* {
+  font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* PAGE BACKGROUND */
+.crNewContainer {
+  background: #fffafa;
+  min-height: 100vh;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #333;
+}
+
+/* WRAPPER */
+.crNewWrapper {
+  width: 80%;
+  max-width: 1200px;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(255, 128, 128, 0.25);
+  padding: 40px 50px;
+  border-top: 6px solid #ff4d4d;
+  transition: 0.3s;
+}
+
+/* HEADING */
+.crNewHeading {
+  margin-bottom: 14px;
+  color: #cc0000;
+  font-weight: 600;
+  font-size: 28px;
+  text-align: center;
+  border-bottom: 2px solid #ffd1d1;
+  padding-bottom: 8px;
+}
+
+/* SUB TEXT */
+.crNewSubText {
+  margin-bottom: 25px;
+  color: #cc0000;
+  text-align: center;
+}
+
+/* TABLE */
+.crNewTable {
+  width: 100%;
+  border-collapse: collapse;
+  background: #ffffff;
+}
+
+.crNewTable th,
+.crNewTable td {
+  border: 1px solid #ffd1d1;
+  padding: 12px 16px;
+  text-align: left;
+  font-size: 14px;
+}
+
+.crNewTable th {
+  background-color: #ffeaea;
+  font-weight: 600;
+  color: #cc0000;
+}
+
+.crNewTable tr:nth-child(even) {
+  background-color: #fffdfd;
+}
+
+.crNewTable tr:hover {
+  background-color: #ffd1d1;
+  transition: 0.3s;
+}
+
+.total-row {
+  font-weight: 600;
+  background-color: #ffeaea;
+}
+
+/* View Button */
+.crActionBtn {
+  background: #ff4d4d;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 8px 14px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+.crActionBtn:hover {
+  background: #e63939;
+}
+
+.crBackBtnWrap {
+  display: flex;
+  justify-content: center;
+  margin-top: 18px;
+}
+
+/* RESPONSIVE DESIGN */
+
+/* Tablet View (max-width: 1024px) */
+@media (max-width: 1024px) {
+  .crNewContainer {
+    padding: 30px 20px;
+  }
+
+  .crNewWrapper {
+    width: 90%;
+    padding: 30px 40px;
+  }
+
+  .crNewHeading {
+    font-size: 24px;
+  }
+
+  .crNewTable th,
+  .crNewTable td {
+    padding: 10px 12px;
+    font-size: 13px;
+  }
+
+  .crActionBtn {
+    padding: 7px 12px;
+    font-size: 13px;
+  }
+}
+
+/* Mobile View (max-width: 768px) */
+@media (max-width: 768px) {
+  .crNewContainer {
+    padding: 20px 10px;
+  }
+
+  .crNewWrapper {
+    width: 95%;
+    padding: 25px 20px;
+  }
+
+  .crNewHeading {
+    font-size: 22px;
+    margin-bottom: 10px;
+  }
+
+  .crNewSubText {
+    font-size: 14px;
+    margin-bottom: 20px;
+  }
+
+  .crNewTable thead {
+    display: none;
+  }
+
+  .crNewTable tr {
+    display: flex;
+    flex-direction: column;
+    background: #fffafa;
+    border: 1px solid #ffd1d1;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    padding: 15px;
+    box-shadow: 0 2px 8px rgba(255, 128, 128, 0.2);
+  }
+
+  .crNewTable td {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: none;
+    border-bottom: 1px solid #ffeaea;
+    padding: 10px 5px;
+    font-size: 14px;
+  }
+
+  .crNewTable td::before {
+    content: attr(data-label);
+    font-weight: 600;
+    color: #cc0000;
+    flex-basis: 40%;
+    text-align: left;
+  }
+
+  .crNewTable td:last-child {
+    border-bottom: none;
+  }
+
+  .crActionBtn {
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+  }
+
+  .crBackBtnWrap {
+    margin-top: 20px;
+  }
+}
+
+/* Small Mobile View (max-width: 480px) */
+@media (max-width: 480px) {
+  .crNewContainer {
+    padding: 15px 5px;
+  }
+
+  .crNewWrapper {
+    width: 100%;
+    padding: 20px 15px;
+    border-radius: 8px;
+  }
+
+  .crNewHeading {
+    font-size: 20px;
+  }
+
+  .crNewSubText {
+    font-size: 13px;
+  }
+
+  .crNewTable tr {
+    padding: 10px;
+    margin-bottom: 10px;
+  }
+
+  .crNewTable td {
+    padding: 8px 5px;
+    font-size: 13px;
+  }
+
+  .crNewTable td::before {
+    flex-basis: 45%;
+  }
+
+  .crActionBtn {
+    padding: 8px;
+    font-size: 13px;
+  }
+}
+
+/* PRINT */
+@media print {
+  body * {
+    visibility: hidden;
+  }
+
+  .crNewWrapper,
+  .crNewWrapper * {
+    visibility: visible;
+  }
+
+  .crNewWrapper {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    box-shadow: none;
+    border: none;
+  }
+}

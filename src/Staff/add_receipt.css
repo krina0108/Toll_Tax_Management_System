@@ -1,0 +1,426 @@
+/* add_receipt.css - Fully Responsive */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+.add-receipt-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #fff5f5, #ffeaea);
+  padding: 20px;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+.add-receipt-card {
+  width: 100%;
+  max-width: 800px;
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 30px;
+  box-shadow: 0 8px 30px rgba(255, 120, 120, 0.12);
+  border-top: 6px solid #ff6b6b;
+  margin: 0 auto;
+}
+
+.add-receipt-title {
+  font-size: 24px;
+  font-weight: 700;
+  color: #b30000;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.add-receipt-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  width: 100%;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 100%;
+}
+
+.form-group label {
+  font-weight: 600;
+  color: #4d0000;
+  font-size: 14px;
+}
+
+.form-group input[type="text"],
+.form-group input[type="number"] {
+  padding: 14px 16px;
+  border: 1.5px solid #ffdede;
+  border-radius: 10px;
+  background: #fffafa;
+  font-size: 16px;
+  width: 100%;
+  transition: all 0.3s ease;
+  min-height: 52px;
+}
+
+.form-group input:focus {
+  outline: none;
+  border-color: #ff6b6b;
+  box-shadow: 0 0 0 3px rgba(255, 107, 107, 0.1);
+}
+
+.button-group {
+  margin-top: 10px;
+  width: 100%;
+}
+
+.add-receipt-btn {
+  width: 100%;
+  padding: 16px;
+  border-radius: 10px;
+  border: none;
+  background: linear-gradient(135deg, #ff4d4d, #ff8080);
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  min-height: 54px;
+}
+
+.add-receipt-btn:hover:not(:disabled) {
+  background: linear-gradient(135deg, #ff3333, #ff6666);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(255, 107, 107, 0.4);
+}
+
+.add-receipt-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.error {
+  color: #c62828;
+  font-size: 12px;
+  margin-top: 4px;
+  min-height: 16px;
+}
+
+.vehicle-plate-preview {
+  background: #fff3f3;
+  padding: 12px 16px;
+  border-radius: 8px;
+  border: 1px solid #ffdede;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.vehicle-plate-preview strong {
+  color: #b30000;
+}
+
+/* Custom Select Styles */
+.custom-select {
+  position: relative;
+  width: 100%;
+}
+
+.custom-select-btn {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 14px 16px;
+  background: #fffafa;
+  border: 1.5px solid #ffdede;
+  border-radius: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  text-align: left;
+  transition: all 0.3s ease;
+  min-height: 52px;
+}
+
+.custom-select-btn:hover {
+  border-color: #ffb3b3;
+}
+
+.selected-text.placeholder {
+  color: #9b9b9b;
+}
+
+.custom-select .arrow {
+  margin-left: 12px;
+  font-size: 16px;
+  color: #4d0000;
+  transition: transform 0.3s ease;
+}
+
+.custom-select.open .arrow {
+  transform: rotate(180deg);
+}
+
+.custom-select-list {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 100%;
+  margin-top: 4px;
+  background: white;
+  border: 1.5px solid #ffdede;
+  border-radius: 10px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  max-height: 200px;
+  overflow-y: auto;
+  z-index: 1000;
+  padding: 8px;
+  list-style: none;
+  width: 100%;
+}
+
+.custom-select-option {
+  padding: 12px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 15px;
+  color: #111;
+  transition: all 0.2s ease;
+  margin-bottom: 2px;
+}
+
+.custom-select-option:hover {
+  background: #fff3f3;
+}
+
+.custom-select-option.active {
+  background: linear-gradient(90deg, #ffecec, #fff2f2);
+  border: 1px solid #ffdede;
+  font-weight: 600;
+}
+
+.custom-select-list::-webkit-scrollbar {
+  width: 6px;
+}
+
+.custom-select-list::-webkit-scrollbar-thumb {
+  background: #ffb3b3;
+  border-radius: 8px;
+}
+
+/* Mobile Phones (up to 767px) */
+@media (max-width: 767px) {
+  .add-receipt-container {
+    padding: 16px 12px;
+    min-height: 100vh;
+    align-items: flex-start;
+  }
+  
+  .add-receipt-card {
+    padding: 24px 20px;
+    max-width: 100%;
+    border-radius: 14px;
+  }
+  
+  .add-receipt-title {
+    font-size: 22px;
+    margin-bottom: 24px;
+  }
+  
+  .add-receipt-form {
+    gap: 18px;
+  }
+  
+  .form-grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+  
+  .form-group {
+    width: 100%;
+  }
+  
+  .form-group input[type="text"],
+  .form-group input[type="number"],
+  .custom-select-btn {
+    padding: 14px;
+    font-size: 16px;
+    min-height: 52px;
+  }
+  
+  .add-receipt-btn {
+    padding: 16px;
+    min-height: 56px;
+    font-size: 17px;
+  }
+}
+
+/* Small Phones (up to 480px) */
+@media (max-width: 480px) {
+  .add-receipt-container {
+    padding: 12px 10px;
+  }
+  
+  .add-receipt-card {
+    padding: 20px 16px;
+    border-radius: 12px;
+  }
+  
+  .add-receipt-title {
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .add-receipt-form {
+    gap: 16px;
+  }
+  
+  .form-grid {
+    gap: 16px;
+  }
+  
+  .form-group input[type="text"],
+  .form-group input[type="number"],
+  .custom-select-btn {
+    padding: 13px 14px;
+    min-height: 50px;
+    font-size: 16px;
+  }
+  
+  .add-receipt-btn {
+    padding: 15px;
+    min-height: 54px;
+    font-size: 16px;
+  }
+  
+  .custom-select-option {
+    padding: 11px 13px;
+    font-size: 14px;
+  }
+}
+
+/* Extra Small Phones (up to 360px) */
+@media (max-width: 360px) {
+  .add-receipt-container {
+    padding: 10px 8px;
+  }
+  
+  .add-receipt-card {
+    padding: 18px 14px;
+    border-radius: 10px;
+  }
+  
+  .add-receipt-title {
+    font-size: 18px;
+    margin-bottom: 18px;
+  }
+  
+  .add-receipt-form {
+    gap: 14px;
+  }
+  
+  .form-group input[type="text"],
+  .form-group input[type="number"],
+  .custom-select-btn {
+    padding: 12px;
+    min-height: 48px;
+    font-size: 15px;
+  }
+  
+  .add-receipt-btn {
+    padding: 14px;
+    min-height: 52px;
+    font-size: 15px;
+  }
+}
+
+/* Tablets (768px to 1024px) */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .add-receipt-container {
+    padding: 30px 24px;
+    align-items: center;
+  }
+  
+  .add-receipt-card {
+    max-width: 700px;
+    padding: 32px 28px;
+    border-radius: 18px;
+  }
+  
+  .add-receipt-title {
+    font-size: 26px;
+    margin-bottom: 32px;
+  }
+  
+  .add-receipt-form {
+    gap: 24px;
+  }
+  
+  .form-grid {
+    gap: 24px;
+  }
+  
+  .form-group input[type="text"],
+  .form-group input[type="number"],
+  .custom-select-btn {
+    padding: 16px 18px;
+    font-size: 16px;
+    min-height: 56px;
+    border-radius: 12px;
+  }
+  
+  .add-receipt-btn {
+    padding: 18px;
+    min-height: 60px;
+    font-size: 17px;
+    border-radius: 12px;
+  }
+  
+  .custom-select-option {
+    padding: 14px 16px;
+    font-size: 15px;
+    border-radius: 10px;
+  }
+}
+
+/* Large Tablets and Small Laptops (1025px to 1279px) */
+@media (min-width: 1025px) and (max-width: 1279px) {
+  .add-receipt-container {
+    padding: 40px 32px;
+  }
+  
+  .add-receipt-card {
+    max-width: 750px;
+    padding: 36px 32px;
+  }
+}
+
+/* Fix for iOS Safari */
+@supports (-webkit-touch-callout: none) {
+  .add-receipt-container {
+    min-height: -webkit-fill-available;
+  }
+}
+
+/* Ensure all elements respect container boundaries */
+.add-receipt-container * {
+  max-width: 100%;
+  box-sizing: border-box;
+}

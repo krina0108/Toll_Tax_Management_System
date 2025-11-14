@@ -1,0 +1,143 @@
+/* 🌸 Container */
+.staff-profile-container {
+  width: 100%;
+  max-width: 900px;
+  margin: 80px auto;
+  padding: 20px;
+  font-family: "Poppins", sans-serif;
+  color: #333;
+  background: #fffafa;
+}
+
+/* 🌸 Profile Card */
+.profile-card {
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(255, 128, 128, 0.25);
+  padding: 25px 30px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.profile-left,
+.profile-right {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+/* 🌸 Title */
+.profile-title {
+  grid-column: 1 / -1;
+  font-size: 24px;
+  font-weight: 600;
+  color: #cc0000;
+  margin-bottom: 25px;
+  text-align: left;
+  border-bottom: 2px solid #ffd1d1;
+  padding-bottom: 8px;
+}
+
+/* 🌸 Profile Row */
+.profile-row {
+  display: flex;
+  flex-direction: column;
+}
+
+.profile-row label {
+  font-weight: 500;
+  color: #444;
+  margin-bottom: 6px;
+}
+
+.profile-row input,
+.profile-row textarea {
+  padding: 10px 12px;
+  border: 1px solid #ffd1d1;
+  border-radius: 6px;
+  background-color: #fffdfd;
+  color: #555;
+  font-size: 14px;
+  outline: none;
+  resize: none;
+}
+
+/* 🌸 Gender */
+.gender-row {
+  flex-direction: column;
+}
+
+.gender-options {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.gender-options label {
+  font-weight: 400;
+  color: #333;
+  font-size: 14px;
+}
+
+.gender-options input {
+  margin-right: 5px;
+}
+
+/* 🌸 Button */
+.update-btn-container {
+  grid-column: 1 / -1;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.update-btn {
+  background-color: #cc0000; /* TTMS red */
+  color: white;
+  font-size: 15px;
+  font-weight: 500;
+  border: none;
+  padding: 10px 24px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 3px 6px rgba(204, 0, 0, 0.25);
+}
+
+.update-btn:hover {
+  background-color: #b30000; /* Darker red on hover */
+  box-shadow: 0 4px 10px rgba(179, 0, 0, 0.3);
+  transform: translateY(-1px);
+}
+
+/* 🌸 Responsive */
+@media (max-width: 768px) {
+  .staff-profile-container {
+    margin: 50px auto; /* Decreased top margin for tablets */
+    padding: 15px;
+  }
+
+  .profile-card {
+    grid-template-columns: 1fr;
+    padding: 20px;
+  }
+
+  .profile-title {
+    font-size: 22px;
+  }
+}
+
+@media (max-width: 480px) {
+  .staff-profile-container {
+    margin: 30px auto; /* Further decreased top margin for phones */
+    padding: 15px;
+  }
+
+  .profile-title {
+    text-align: center;
+  }
+
+  .profile-card {
+    padding: 15px;
+  }
+}

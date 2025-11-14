@@ -1,0 +1,153 @@
+/* ===== Staff Login Page (Attractive & Responsive) ===== */
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  background: #fff5f5;
+}
+
+/* 🌸 Page Container */
+.staff-login-container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+/* 🧾 Login Card */
+.staff-login-form {
+  background: #fff;
+  padding: 40px 30px;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(255, 100, 100, 0.2);
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+  border-top: 5px solid #ff4d4d;
+}
+
+.staff-login-form:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(255, 100, 100, 0.3);
+}
+
+/* 🏷️ Headings */
+.staff-login-form h2 {
+  margin-bottom: 30px;
+  color: #e60000;
+  font-size: 28px;
+  letter-spacing: 1px;
+}
+
+.staff-subtitle {
+  font-size: 14px;
+  color: #660000;
+  margin-bottom: 20px;
+}
+
+/* 📋 Form Layout */
+.staff-form-group {
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.staff-form-group label {
+  margin-bottom: 6px;
+  font-weight: 500;
+  color: #b30000;
+  text-align: left;
+  font-size: 14px;
+  display: block;
+}
+
+.staff-form-group input {
+  padding: 12px 15px;
+  width: 100%;
+  border-radius: 10px;
+  border: 1px solid #ff9999;
+  font-size: 15px;
+  outline: none;
+  transition: 0.3s;
+  background-color: #fffafa;
+}
+
+.staff-form-group input:focus {
+  border-color: #e60000;
+  box-shadow: 0 0 5px rgba(230, 0, 0, 0.3);
+  background: #fff;
+}
+
+/* ✅ Login Button */
+.staff-login-btn {
+  margin-top: 15px;
+  padding: 12px;
+  background: linear-gradient(135deg, #ff9999, #ff4d4d);
+  border: none;
+  border-radius: 25px;
+  font-size: 16px;
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+  width: 100%;
+  box-shadow: 0 6px 15px rgba(255, 100, 100, 0.2);
+}
+
+.staff-login-btn:hover {
+  background: linear-gradient(135deg, #ff4d4d, #e60000);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(230, 0, 0, 0.3);
+}
+
+/* 🚨 Error Message */
+.staff-error {
+  color: #d90429;
+  font-size: 13px;
+  margin-bottom: 10px;
+  display: block;
+  text-align: center;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+  .staff-login-form {
+    padding: 35px 25px;
+    max-width: 350px;
+  }
+
+  .staff-login-form h2 {
+    font-size: 26px;
+  }
+
+  .staff-form-group input {
+    font-size: 15px;
+    padding: 11px 14px;
+  }
+
+  .staff-login-btn {
+    font-size: 15px;
+    padding: 11px;
+  }
+}
+
+@media (max-width: 480px) {
+  .staff-login-form {
+    padding: 30px 20px;
+    max-width: 300px;
+  }
+
+  .staff-login-form h2 {
+    font-size: 24px;
+  }
+
+  .staff-form-group input {
+    font-size: 14px;
+    padding: 10px 12px;
+  }
+
+  .staff-login-btn {
+    font-size: 14px;
+    padding: 10px;
+  }
+}

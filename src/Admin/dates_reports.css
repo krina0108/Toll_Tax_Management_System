@@ -1,0 +1,197 @@
+/* 🌸 Global Font */
+* {
+  font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* 🌸 Page Container */
+.drNewContainer {
+  background: #fffafa;
+  min-height: 100vh;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: "Poppins", sans-serif;
+  color: #333;
+}
+
+.drNewHeading {
+  margin-bottom: 30px;
+  color: #cc0000;
+  font-weight: 600;
+  font-size: 28px;
+  text-align: center;
+  border-bottom: 2px solid #ffd1d1;
+  padding-bottom: 8px;
+}
+
+/* 🧾 Form Wrapper */
+.drNewWrapper {
+  width: 80%;
+  max-width: 1200px;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(255, 128, 128, 0.25);
+  padding: 40px 50px;
+  text-align: center;
+  border-top: 6px solid #ff4d4d;
+  transition: all 0.3s ease;
+}
+
+/* 🌸 Form */
+.drNewForm {
+  width: 100%;
+  max-width: 550px;
+  margin: 0 auto;
+}
+
+.drFormGroup {
+  margin-bottom: 20px;
+}
+
+.drFormLabel {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 15px;
+  color: #cc0000;
+  font-weight: 600;
+}
+
+.drFormInput {
+  width: 100%;
+  padding: 12px 16px;
+  border: 1px solid #ffd1d1;
+  border-radius: 8px;
+  font-size: 14px;
+  background: #fffdfd;
+  transition: border-color 0.3s ease;
+}
+
+.drFormInput:focus {
+  border-color: #ff4d4d;
+  outline: none;
+}
+
+/* 🌸 Submit Button */
+.drActionBtn {
+  background: #ff4d4d;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 24px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  transition: 0.3s;
+  width: 100%;
+  max-width: 200px;
+}
+
+.drActionBtn:hover {
+  background: #e63939;
+}
+
+/* 🌸 Responsive Card Layout */
+@media (max-width: 768px) {
+  .drNewContainer {
+    padding: 30px 20px;
+  }
+
+  .drNewHeading {
+    font-size: 24px;
+  }
+
+  .drNewWrapper {
+    padding: 30px 30px;
+    width: 90%;
+  }
+
+  .drNewForm {
+    max-width: 100%;
+  }
+
+  .drFormGroup {
+    display: flex;
+    flex-direction: column;
+    background: #fffafa;
+    border: 1px solid #ffd1d1;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    padding: 15px;
+    box-shadow: 0 2px 8px rgba(255, 128, 128, 0.2);
+  }
+
+  .drFormLabel {
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+
+  .drFormInput {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  .drActionBtn {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+/* 🌸 Extra Small Screens */
+@media (max-width: 480px) {
+  .drNewContainer {
+    padding: 20px 15px;
+  }
+
+  .drNewHeading {
+    font-size: 20px;
+  }
+
+  .drNewWrapper {
+    padding: 25px 20px;
+    width: 95%;
+  }
+
+  .drFormLabel {
+    font-size: 12px;
+  }
+
+  .drFormInput {
+    font-size: 12px;
+  }
+}
+
+/* 💻 Medium to large screens */
+@media (min-width: 769px) {
+  .drNewWrapper {
+    padding: 40px 50px;
+  }
+
+  .drNewHeading {
+    font-size: 28px;
+  }
+}
+
+/* 🖨️ Print Styles */
+@media print {
+  body * {
+    visibility: hidden;
+  }
+
+  .drNewWrapper,
+  .drNewWrapper * {
+    visibility: visible;
+  }
+
+  .drNewWrapper {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    box-shadow: none;
+    border: none;
+  }
+}

@@ -1,0 +1,261 @@
+/* 🌸 Global Font */
+* {
+  font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* 🌸 Page Wrapper */
+.receipt-container {
+  background: #fffafa;
+  min-height: 100vh;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: "Poppins", sans-serif;
+  color: #333;
+}
+
+/* 🌸 Title */
+.receipt-title {
+  margin-bottom: 30px;
+  color: #cc0000;
+  font-weight: 600;
+  font-size: 28px;
+  text-align: center;
+  border-bottom: 2px solid #ffd1d1;
+  padding-bottom: 8px;
+}
+
+/* 🌸 Filter Button */
+.filter-btn {
+  background: #ff4d4d;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 14px;
+  margin-bottom: 20px;
+  transition: 0.3s;
+}
+
+.filter-btn:hover {
+  background: #e63939;
+}
+
+/* 🌸 Card Container */
+.receipt-card {
+  width: 80%;
+  max-width: 1200px;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(255, 128, 128, 0.25);
+  padding: 40px 50px;
+  text-align: center;
+  border-top: 6px solid #ff4d4d;
+  transition: all 0.3s ease;
+}
+
+/* 🌸 Table */
+.receipt-table-wrapper {
+  overflow-x: auto;
+}
+
+.receipt-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #ffffff;
+  overflow: hidden;
+}
+
+.receipt-table th,
+.receipt-table td {
+  border: 1px solid #ffd1d1;
+  padding: 12px 16px;
+  text-align: left;
+  font-size: 14px;
+}
+
+.receipt-table th {
+  background-color: #ffeaea;
+  font-weight: 600;
+  color: #cc0000;
+}
+
+.receipt-table tr:nth-child(even) {
+  background-color: #fffdfd;
+}
+
+.receipt-table tr:hover {
+  background-color: #ffd1d1;
+  transition: background-color 0.3s ease;
+}
+
+/* 🌸 Button */
+.details-btn {
+  background: #ff4d4d;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 8px 14px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+.details-btn:hover {
+  background: #e63939;
+}
+
+/* 🌸 Details Section */
+.receipt-details {
+  background: #ffffff;
+  margin-top: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(255, 128, 128, 0.25);
+  padding: 20px;
+  border: 1px solid #ffd1d1;
+}
+
+.receipt-details h3 {
+  font-size: 20px;
+  font-weight: 600;
+  color: #cc0000;
+  margin-bottom: 15px;
+}
+
+.back-btn {
+  background-color: #cc0000;
+  color: white;
+  font-size: 14px;
+  font-weight: 500;
+  border: none;
+  padding: 8px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: all 0.3s ease;
+  box-shadow: 0 3px 6px rgba(204,0,0,0.25);
+}
+
+.back-btn:hover {
+  background-color: #b30000;
+  transform: translateY(-1px);
+}
+
+/* 🌸 Responsive Card Layout */
+@media (max-width: 768px) {
+  .receipt-container {
+    padding: 30px 20px;
+  }
+
+  .receipt-title {
+    font-size: 24px;
+  }
+
+  .receipt-card {
+    padding: 30px 30px;
+    width: 90%;
+  }
+
+  .receipt-table thead {
+    display: none;
+  }
+
+  .receipt-table tr {
+    display: flex;
+    flex-direction: column;
+    background: #fffafa;
+    border: 1px solid #ffd1d1;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    padding: 10px;
+    box-shadow: 0 2px 8px rgba(255, 128, 128, 0.2);
+  }
+
+  .receipt-table td {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: none;
+    border-bottom: 1px solid #ffeaea;
+    padding: 8px 10px;
+    font-size: 14px;
+  }
+
+  .receipt-table td::before {
+    content: attr(data-label);
+    font-weight: 600;
+    color: #cc0000;
+    flex-basis: 40%;
+    text-align: left;
+  }
+
+  .receipt-table td:last-child {
+    border-bottom: none;
+  }
+
+  .details-btn {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+/* 🌸 Extra Small Screens */
+@media (max-width: 480px) {
+  .receipt-container {
+    padding: 20px 15px;
+  }
+
+  .receipt-title {
+    font-size: 20px;
+  }
+
+  .receipt-card {
+    padding: 25px 20px;
+    width: 95%;
+  }
+
+  .receipt-table td {
+    font-size: 12px;
+  }
+
+  .receipt-table td::before {
+    flex-basis: 45%;
+  }
+}
+
+/* 💻 Medium to large screens */
+@media (min-width: 769px) {
+  .receipt-card {
+    padding: 40px 50px;
+  }
+
+  .receipt-title {
+    font-size: 28px;
+  }
+}
+
+/* 🖨️ Print Styles */
+@media print {
+  body * {
+    visibility: hidden;
+  }
+
+  .receipt-card,
+  .receipt-card * {
+    visibility: visible;
+  }
+
+  .receipt-card {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    box-shadow: none;
+    border: none;
+  }
+}
